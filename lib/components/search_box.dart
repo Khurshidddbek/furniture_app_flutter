@@ -4,10 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../constants.dart';
 
 class SearchBox extends StatelessWidget {
-  const SearchBox({
-    Key key,
-    this.onChanged,
-  }) : super(key: key);
+  const SearchBox({required this.onChanged, Key? key}) : super(key: key);
 
   final ValueChanged onChanged;
 

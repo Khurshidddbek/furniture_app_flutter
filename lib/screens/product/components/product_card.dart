@@ -5,15 +5,15 @@ import '../../../constants.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
-    Key key,
-    this.itemIndex,
-    this.product,
-    this.press,
+    Key? key,
+    required this.itemIndex,
+    required this.product,
+    required this.press,
   }) : super(key: key);
 
   final int itemIndex;
   final Product product;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class ProductCard extends StatelessWidget {
       // color: Colors.blueAccent,
       height: 160,
       child: InkWell(
-        onTap: press,
+        onTap: () => press.call(),
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: <Widget>[
@@ -82,7 +82,7 @@ class ProductCard extends StatelessWidget {
                           horizontal: kDefaultPadding),
                       child: Text(
                         product.title,
-                        style: Theme.of(context).textTheme.button,
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                     ),
                     // it use the available space
@@ -101,7 +101,7 @@ class ProductCard extends StatelessWidget {
                       ),
                       child: Text(
                         "\$${product.price}",
-                        style: Theme.of(context).textTheme.button,
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                     ),
                   ],

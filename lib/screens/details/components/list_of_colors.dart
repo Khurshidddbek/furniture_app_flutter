@@ -4,9 +4,7 @@ import '../../../constants.dart';
 import 'color_dots.dart';
 
 class ListOfColors extends StatelessWidget {
-  const ListOfColors({
-    Key key,
-  }) : super(key: key);
+  const ListOfColors({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

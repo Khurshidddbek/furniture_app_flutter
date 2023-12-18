@@ -2,7 +2,13 @@ class Product {
   final int id, price;
   final String title, description, image;
 
-  Product({this.id, this.price, this.title, this.description, this.image});
+  Product({
+    required this.id,
+    required this.price,
+    required this.title,
+    required this.description,
+    required this.image,
+  });
 }
 
 // list of products

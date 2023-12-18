@@ -9,7 +9,7 @@ import 'product_image.dart';
 class Body extends StatelessWidget {
   final Product product;
 
-  const Body({Key key, this.product}) : super(key: key);
+  const Body({Key? key, required this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     // it provide us total height and width
@@ -49,7 +49,7 @@ class Body extends StatelessWidget {
                         vertical: kDefaultPadding / 2),
                     child: Text(
                       product.title,
-                      style: Theme.of(context).textTheme.headline6,
+                      style: Theme.of(context).textTheme.titleLarge,
                     ),
                   ),
                   Text(

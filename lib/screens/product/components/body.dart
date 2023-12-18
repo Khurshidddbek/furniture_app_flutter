@@ -38,14 +38,15 @@ class Body extends StatelessWidget {
                     itemIndex: index,
                     product: products[index],
                     press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => DetailsScreen(
-                            product: products[index],
+                      if (context.mounted)
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => DetailsScreen(
+                              product: products[index],
+                            ),
                           ),
-                        ),
-                      );
+                        );
                     },
                   ),
                 )

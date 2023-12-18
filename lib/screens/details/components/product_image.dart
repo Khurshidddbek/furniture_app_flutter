@@ -3,11 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 class ProductPoster extends StatelessWidget {
-  const ProductPoster({
-    Key key,
-    @required this.size,
-    this.image,
-  }) : super(key: key);
+  const ProductPoster({Key? key, required this.size, required this.image})
+      : super(key: key);
 
   final Size size;
   final String image;

@@ -5,7 +5,7 @@ import '../../../constants.dart';
 
 class ChatAndAddToCart extends StatelessWidget {
   const ChatAndAddToCart({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -33,7 +33,7 @@ class ChatAndAddToCart extends StatelessWidget {
           ),
           // it will cover all available spaces
           Spacer(),
-          FlatButton.icon(
+          TextButton.icon(
             onPressed: () {},
             icon: SvgPicture.asset(
               "assets/icons/shopping-bag.svg",

@@ -8,7 +8,7 @@ import 'components/body.dart';
 class DetailsScreen extends StatelessWidget {
   final Product product;
 
-  const DetailsScreen({Key key, this.product}) : super(key: key);
+  const DetailsScreen({Key? key, required this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class DetailsScreen extends StatelessWidget {
         padding: EdgeInsets.only(left: kDefaultPadding),
         icon: SvgPicture.asset("assets/icons/back.svg"),
         onPressed: () {
-          Navigator.pop(context);
+          if (context.mounted) Navigator.pop(context);
         },
       ),
       centerTitle: false,
